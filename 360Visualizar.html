@@ -1,16 +1,23 @@
 <html>
-<head>
-    <meta charset="utf-8">
-    <title>Visor 360° con A-Frame</title>
-    <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
-</head>
-<body>
-    <a-scene>
-        <a-sky src="https://github.com/Alvata/Visor360/blob/main/Museo%20del%20Louvre%20Street%20View%20360.jpg"></a-sky>
+  <head>
+    <title>Hola, WebVR! - A-Frame</title>
+    <meta name="description" content="Hello, WebVR! A-Frame">
+    <!-- Con este script se importa la librería A-Frame -->
+    <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+  </head>
+  <body>
+    <!-- Declarar los assets (materiales que usarás) -->
+    <a-assets>
+      <!-- Imagen 360 con un identificador único -->
+      <img id="MySky" crossorigin src="https://github.com/Alvata/Visor360/blob/main/Museo%20del%20Louvre%20Street%20View%20360.jpg">
+    </a-assets>
 
-        <a-entity camera look-controls position="0 1.6 0"></a-entity>
+    <!-- Crear la escena de A-Frame -->
+    <a-scene>
+      <!-- Declarar un "cielo" y tapizarlo con la imagen 360 -->
+      <a-sky src="#MySky"></a-sky>
     </a-scene>
-</body>
+  </body>
 </html>
 
 
